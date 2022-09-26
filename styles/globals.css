@@ -1,4 +1,8 @@
-
+a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
 .read-more-less--more{
   color: blue;
   display: block;
