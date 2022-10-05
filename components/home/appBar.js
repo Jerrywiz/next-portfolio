@@ -143,7 +143,9 @@ const NavBar = () => {
               </Link>
             ))}
           </Box>
-          <Button sx={{ backgroundColor: "blue", color: "white" }}>Download Cv</Button>
+          <Button sx={{ backgroundColor: "blue", color: "white" }}>
+            Download Cv
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
