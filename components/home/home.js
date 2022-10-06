@@ -44,17 +44,6 @@ const home = () => {
               {longText}
             </ReactReadMoreReadLess>
           </Box>
-          <Box mt={3}>
-            <Typography>Find me on</Typography>
-            <Box display="flex" sx={{ backgroundColor: "grey", width: 100 }}>
-              <Box mR={2}>
-                <FacebookIcon />
-              </Box>
-              <TwitterIcon />
-              <LinkedInIcon />
-              <YouTubeIcon />
-            </Box>
-          </Box>
         </Grid>
         <Grid item md={4} ml={4}>
           <Card elevation={0} sx={{ borderRadius: 4 }}>
