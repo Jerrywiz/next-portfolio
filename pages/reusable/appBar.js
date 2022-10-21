@@ -15,15 +15,16 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import about from "../../components/about";
 
 const pages = [
   {
     title: "HOME",
-    href: "./home",
+    href: "home.js",
   },
   {
     title: "SERVICES",
-    href: "./",
+    href: "../components/about",
   },
   {
     title: "PROJECTS",
@@ -59,7 +60,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "purple" }}>
+    <AppBar elevation={0} position="static" sx={{ backgroundColor: "white" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -73,7 +74,7 @@ const NavBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -111,7 +112,9 @@ const NavBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.title}</Typography>
+                  <Typography textAlign="center" sx={{ color: "red" }}>
+                    {page.title}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -138,7 +141,7 @@ const NavBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href="" style={{ ml: 2 }}>
+              <Link href={page.href} style={{ ml: 2 }}>
                 <a>{page.title} </a>
               </Link>
             ))}
